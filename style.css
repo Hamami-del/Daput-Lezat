@@ -1,0 +1,175 @@
+/* ... (Bagian CSS lainnya) ... */
+
+/* MAIN MENU CONTAINER */
+.menu-list {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+    
+    /* PENTING: Flexbox yang mengendalikan tata letak kolom */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; /* Jarak antar kartu */
+}
+
+/* PRODUCT CARD - WADAH SETIAP PRODUK */
+.product-card {
+    width: 100%; 
+    max-width: 450px; 
+    
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    /* Hapus 'height' jika ada, biarkan konten menentukan tingginya */
+}
+
+/* WADAH GAMBAR */
+.image-container {
+    width: 100%;
+    height: 250px; /* JANGAN UBAH INI */
+    overflow: hidden;
+    /* Tambahkan latar belakang abu-abu agar terlihat jelas jika gambar gagal dimuat */
+    background-color: #e0e0e0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+/* RESET DASAR & FONT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Ubah ini untuk tema makanan */
+    background-color: #FFF8E1; /* Warna Krem Sangat Pucat (seperti meja kayu) */
+    color: #333;
+}
+
+/* HEADER */
+header {
+    /* Gunakan warna yang lebih hangat untuk header */
+    background-color: #B45B3F; /* Warna Cokelat Karamel */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+/* ... (Bagian CSS lainnya) ... */
+
+/* TOMBOL PESAN */
+.btn-order {
+    display: inline-block; /* Penting: agar tombol menyesuaikan lebar teks, bukan 100% lebar container */
+    
+    /* PEMBERIAN WARNA DAN BENTUK */
+    background-color: #25D366; /* Warna Hijau WhatsApp yang Cerah */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Padding lebih besar agar tombol terlihat gemuk */
+    border-radius: 25px; /* Sudut membulat (Pil) agar terlihat modern */
+    font-weight: 700; /* Lebih tebal */
+    text-transform: uppercase; /* Huruf Kapital agar lebih menonjol */
+    font-size: 0.9em;
+    margin-top: 10px; /* Jarak dari harga/deskripsi di atasnya */
+    
+    /* EFEK MENARIK */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D lembut */
+    transition: all 0.3s ease; /* Transisi halus untuk hover */
+}
+
+/* EFEK HOVER (Saat mouse diarahkan ke tombol) */
+.btn-order:hover {
+    background-color: #128C7E; /* Warna Hijau Tua saat di-hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Bayangan lebih gelap */
+}
+/* Styling untuk Popup Order COD */
+.popup-overlay {
+    display: none; /* Default: Sembunyikan popup */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang gelap transparan */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.popup h3 {
+    color: #B45B3F;
+    margin-bottom: 10px;
+}
+
+.popup label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.popup input[type="text"], 
+.popup textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-cod {
+    background-color: #FF4500; /* Warna mencolok untuk aksi final */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+/* ... (Bagian CSS lainnya) ... */
+/* ... (Bagian CSS lainnya) ... */
+/* ... (Bagian CSS lainnya) ... */
